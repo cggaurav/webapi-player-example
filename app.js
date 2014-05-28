@@ -37,7 +37,7 @@
 			});
 	});
 
-	module.controller('AppController', function($scope, Auth, API, $location) {
+	module.controller('AppController', function($scope, Auth, API, $location, PlayQueue) {
 		console.log('in AppController');
 
 		console.log(location);
@@ -46,6 +46,9 @@
 			API.getMyUsername().then(function(username) {
 				Auth.setUsername(username);
 				$scope.$emit('login');
+				$scope.initialTracks = ['spotify:track:2cJz1loJp5EZM6shmQpLZN'];
+				PlayQueue.enqueueList($scope.initialTracks);
+				PlayQueue.playFrom(0);
 				// $scope.$apply();
 				$location.replace();
 			}, function(err) {
