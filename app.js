@@ -46,12 +46,12 @@
 			API.getMyUsername().then(function(username) {
 				Auth.setUsername(username);
 				$scope.$emit('login');
-				$scope.$apply();
+				// $scope.$apply();
 				$location.replace();
 			}, function(err) {
 				$scope.showplayer = false;
 				$scope.showlogin = true;
-				$scope.$apply();
+				// $scope.$apply();
 				$location.replace();
 			});
 		}
