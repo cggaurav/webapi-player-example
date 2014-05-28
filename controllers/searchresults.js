@@ -9,7 +9,7 @@
 		API.getSearchResults($scope.query).then(function(results) {
 			console.log('got search results', results);
 			$scope.tracks = results.tracks.items;
-			$scope.$apply();
+			// $scope.$apply();
 		});
 
 		$scope.play = function(trackuri) {

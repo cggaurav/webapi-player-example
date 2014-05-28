@@ -25,7 +25,7 @@
 							'public': pl['public']
 						};
 					});
-					$scope.$apply();
+					// $scope.$apply();
 				});
 			}
 		}
@@ -95,7 +95,7 @@
 		$rootScope.$on('login', function() {
 			$scope.username = Auth.getUsername();
 			updatePlaylists();
-			$scope.$apply();
+			// $scope.$apply();
 		});
 
 		$rootScope.$on('playqueuechanged', function() {

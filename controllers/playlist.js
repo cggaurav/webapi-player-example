@@ -19,7 +19,7 @@
 			console.log('got playlist', list);
 			$scope.name = list.name;
 			$scope.data = list;
-			$scope.$apply();
+			// $scope.$apply();
 		});
 
 		API.getPlaylistTracks($scope.username, $scope.playlist).then(function(list) {
